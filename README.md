@@ -11,5 +11,9 @@ version 1.0
     Был создан сам проэкт.
     Подключил БД PostgreSQL.
     Настроил settings.py.
-    Настроил static и media
+    Настроил static и media.
+
+version 1.1
+    Была добавлена домашняя страница
+
 

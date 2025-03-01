@@ -34,5 +34,8 @@ version 1.2
 version 1.3
 
     Сделал 60% models.py.
+    
+version 1.4 
 
+    Доделал models.py (Надеюсь)
 

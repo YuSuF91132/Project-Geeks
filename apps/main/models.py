@@ -124,6 +124,77 @@ class OurProjects(models.Model):
         verbose_name="Вертикальная Линия"
     )      
     def __str__(self):
+        
         return self.title
+    
     class Meta:
         verbose_name = "Наши Проэкты"
+
+
+class OurServices(models.Model):
+    title = models.CharField(
+        max_length=100,
+        verbose_name="Заголовок"
+    )
+    years = models.IntegerField(
+        verbose_name = "Годы"
+    ) 
+    years_title1 = models.CharField(
+        max_length=100,
+        verbose_name="Заголовок лет 1"
+    )  
+    years_title2 = models.CharField(
+        max_length=100,
+        verbose_name="Заголовок лет 2"
+    )   
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Наш Сервис"
+        verbose_name_plural = "Наши сервисы"  
+
+class Contacts(models.Model):
+    title = models.CharField(
+        max_length=100,
+        verbose_name="Заголовок"
+    )
+    number1 = models.CharField(
+        max_length=100,
+        verbose_name="1 Номер"
+    )
+    number2 = models.CharField(
+        max_length=100,
+        verbose_name="2 Номер"
+    ) 
+    email = models.EmailField(
+        verbose_name="Эл.Почта"
+    )
+    adress = models.CharField(
+        max_length=255,
+        verbose_name="Адрес"
+    ) 
+    send_button = models.CharField(
+        max_length=55,
+        verbose_name="Кнопка Отправить"
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Контакт"
+        verbose_name_plural = "Контакты"    
+
+class Footer(models.Model):
+    name = models.CharField(
+        max_length=100,
+        verbose_name="Имя Компании"
+    )
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Футер"

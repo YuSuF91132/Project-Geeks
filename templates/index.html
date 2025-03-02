@@ -5,7 +5,7 @@
 <head>
 <meta  charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Go.arch  - Architecture | Interiors |  Real Estate Landing Page</title> 
+<title>Geeks</title> 
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="{% static 'icons/favicon.png' %}">
@@ -52,19 +52,19 @@
     <header id="top" class="header-home">
       <div class="brand-panel">
         <a href="index.html#top" class="brand js-target-scroll">
-          go<span class="text-primary">.</span>arch
+          {{  info_id.name }}
         </a>
-        <div class="brand-name">Go.arch</div>
+        <div class="brand-name">{{  info_id.name }}</div>
         <div class="slide-number">
           <span class="current-number text-primary">0<span class="count">1</span></span>
           <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
         </div>
       </div>
-      <div class="header-phone">+7 (212) 674-25-10</div>
+      <div class="header-phone">{{  info_id.phone  }}</div>
       <div class="vertical-panel"></div>
       <div class="vertical-panel-content">
         <div class="vertical-panel-info">
-            <div class="vertical-panel-title">Architecture buro</div>
+            <div class="vertical-panel-title">{{  info_id.vertical_text  }}</div>
             <div class="line"></div>
          </div>
         <ul class="social-list">
@@ -80,23 +80,23 @@
       <nav class="navbar-desctop visible-md visible-lg">
         <div class="container">
           <a href="index.html#top" class="brand js-target-scroll">
-            go<span class="text-primary">.</span>arch
+            {{  info_id.name  }}
           </a>
           <ul class="nav navbar-desctop-menu">
             <li class="active">
-              <a href="index.html#top">Home</a>
+              <a href="index.html#top">{{  navigation_id.home  }}</a>
             </li>
             <li>
-              <a href="index.html#about">About</a>
+              <a href="index.html#about">{{  navigation_id.about  }}</a>
             </li>
             <li>
-              <a href="index.html#projects">Projects</a>
+              <a href="index.html#projects">{{  navigation_id.projects  }}</a>
             </li>  
             <li>
-              <a href="index.html#services">Services</a>
+              <a href="index.html#services">{{  navigation_id.services  }}</a>
             </li>
             <li>
-              <a href="index.html#contacts">Contacts</a>
+              <a href="index.html#contacts">{{  navigation_id.contacts  }}</a>
             </li>
           </ul>
         </div>
@@ -121,19 +121,19 @@
         <div class="collapse navbar-collapse" id="navbar-mobile"> 
           <ul class="navbar-nav-mobile">
             <li class="active">
-              <a href="index.html#top">Home</a>
+              <a href="index.html#top">{{  navigation_id.home  }}</a>
             </li>
             <li>
-              <a href="index.html#about">About</a>
+              <a href="index.html#about">{{  navigation_id.about  }}</a>
             </li>
             <li>
-              <a href="index.html#projects">Projects</a>
+              <a href="index.html#projects">{{  navigation_id.projects  }}</a>
             </li>  
             <li>
-              <a href="index.html#clients">Clients</a>
+              <a href="index.html#clients">{{  navigation_id.clients  }}</a>
             </li>
             <li>
-              <a href="index.html#contacts">Contacts</a>
+              <a href="index.html#contacts">{{  navigation_id.contacts  }}</a>
             </li>
           </ul>
         </div>
@@ -163,7 +163,7 @@
 
               <!-- Main image-->
 
-              <img src="{% static 'img/slider/slide1.jpg' %}"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+              <img src="{{ main_projects_all.image.url }}"  alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
 
               <!-- Layer 1 -->
 
@@ -227,149 +227,6 @@
                 data-responsive_offset="on"><a href="index.html#about" class="btn js-target-scroll">Look more <i class="icon-next"></i></a>
               </div>
             </li>
-
-            <!-- Slide 2 -->
-
-            <li data-transition="slotzoom-horizontal" data-slotamount="7" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000">
-
-              <!-- Main image -->
-
-              <img src="{% static 'img/slider/slide2.jpg'%}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-              <!-- Layer 1 -->
-
-              <div class="slide-title tp-caption tp-resizeme" 
-                data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['-35','-35', '-55']"
-                data-fontsize="['50','45', '45']"
-                data-lineheight="['80','75','65']"
-                data-width="['1100','700','550']"
-                data-height="none"
-                data-whitespace="normal"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="500" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on"
-                data-elementdelay="0.05">Exhibition center in boston
-              </div>
-
-
-              <!-- Layer 2 -->
-
-              <div class="slide-subtitle tp-caption tp-resizeme"
-                data-x="['right','right','right','right']" data-hoffset="['0']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['75','105']"
-                data-fontsize="['18','19']" 
-                data-lineheight="['30','30']" 
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;" 
-                data-transform_out="opacity:0;s:1000;s:1000;" 
-                data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                data-start="1500" 
-                data-splitin="none" 
-                data-splitout="none">Concert Hall is the architecture of a new generation, a building<br> 
-                that exists not only in the dimension of space,<br> 
-                but also in the dimension of time and communication. 
-              </div>
-
-              <!-- Layer 3 -->
-
-              <div class="tp-caption"
-                data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['195','215']"
-                data-fontsize="['17','18']" 
-                data-width="none"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"
-                data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_out="x:inherit;y:inherit;" 
-                data-start="1500" 
-                data-splitin="none" 
-                data-splitout="none" 
-                data-responsive_offset="on"><a href="index.html#about" class="btn js-target-scroll">Look more <i class="icon-next"></i></a>
-              </div>
-            </li>
-
-            <!-- Slide 3 -->
-
-            <li data-transition="slotzoom-horizontal" data-slotamount="7" data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1000">
-
-              <!-- Main image-->
-
-              <img src="{% static 'img/slider/slide3.jpg'%}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-              <!-- Layer 1 -->
-
-              <div class="slide-title tp-caption tp-resizeme" 
-                data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['-35','-35', '-25']"
-                data-fontsize="['50','45', '45']"
-                data-lineheight="['80','75', '65']"
-                data-width="['1000','700','550']"
-                data-height="none"
-                data-whitespace="normal"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="500" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on"
-                data-elementdelay="0.05">Modern hotel in london
-              </div>
-
-
-              <!-- Layer 2 -->
-
-              <div class="slide-subtitle tp-caption tp-resizeme"
-                data-x="['right','right','right','right']" data-hoffset="['0']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['75','105']"
-                data-fontsize="['18','19']" 
-                data-lineheight="['30','30']" 
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;" 
-                data-transform_out="opacity:0;s:1000;s:1000;" 
-                data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                data-start="1500" 
-                data-splitin="none" 
-                data-splitout="none">Concert Hall is the architecture of a new generation, a building<br> 
-                that exists not only in the dimension of space,<br> 
-                but also in the dimension of time and communication. 
-              </div>
-
-              <!-- Layer 3 -->
-
-              <div class="tp-caption"
-                data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['195','215']"
-                data-fontsize="['17','18']" 
-                data-width="none"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-                data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"
-                data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_out="x:inherit;y:inherit;" 
-                data-start="1500" 
-                data-splitin="none" 
-                data-splitout="none" 
-                data-responsive_offset="on"><a href="index.html#about" class="btn js-target-scroll">Look more <i class="icon-next"></i></a>
-              </div>
             </li>
           </ul>
         </div>
@@ -397,21 +254,21 @@
               <div class="col-base col-about-spec col-sm-6 col-md-4">
                 <h3 class="col-about-title">our<br> specialization<span class="text-primary">:</span></h3>
                 <div class="service-item">
-                  <img alt="" src="{% static 'img/img-icon/icon-architecture.png'%}">
+                  <img alt="" src="{% static 'icons/uxui-icon.png'%}">
                   <h4>Architecture</h4>
                 </div>
                 <div class="service-item">
-                  <img alt="" src="{% static 'img/img-icon/icon-interiors.png'%}">
+                  <img alt="" src="{% static 'icons/javascipt_icon.png'%}">
                   <h4>Interiors</h4>
                 </div>
                 <div class="service-item">
-                  <img alt="" src="{% static 'img/img-icon/icon-planing.png'%}">
+                  <img alt="" src="{% static 'icons/backend-icon.png'%}">
                   <h4>Planing</h4>
                 </div>
               </div>
               <div class="clearfix visible-sm"></div>
               <div class="col-base col-about-img col-sm-6 col-md-4">
-                <img alt="" class="img-responsive" src="{% static 'img/380x370.jpg'%}">
+                <img alt="" class="img-responsive" src="{% static 'img/geekslogo.png'%}">
               </div>
             </div>
           </div>
@@ -570,14 +427,14 @@
             <div class="row-services row-base row">
               <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp">
                 <div class="service-item">
-                  <img alt="" src="{% static 'img/img-icon/icon-drawing.png' %}">
+                  <img alt="" src="{% static 'icons/mentor-icon.png' %}">
                   <h4>Development</h4>
                   <p>For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors.</p>
                 </div>
               </div>
               <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="service-item">
-                  <img alt="" src="{% static 'img/img-icon/icon-house-plans.png' %}">
+                  <img alt="" src="{% static 'icons/repeat-icon.png' %}">
                   <h4>House plans</h4>
                   <p>For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors.</p>
                 </div>
@@ -585,7 +442,7 @@
               <div class="clearfix visible-sm"></div>
               <div class="col-base col-service col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="service-item">
-                  <img alt="" src="{% static 'img/img-icon/icon-house-key.png' %}">
+                  <img alt="" src="{% static 'icons/teacher-icon.png' %}">
                   <h4>Finishing works</h4>
                   <p>For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors.</p>
                 </div>

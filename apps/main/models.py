@@ -75,7 +75,7 @@ class MainProjects(models.Model):
         return self.project_name
     class Meta:
         verbose_name = "Главный Проэкт"
-        verbose_name = "Главные Проэкты"
+        verbose_name_plural = "Главные Проэкты"
 
 class About(models.Model):
     title = models.CharField(
@@ -93,17 +93,28 @@ class About(models.Model):
         max_length=55,
         verbose_name="Наши Специальности"
     )
-    specialization = models.CharField(
-        max_length=55,
-        verbose_name="Специальности"
-    )
-    logo = models.ImageField(
-        verbose_name="Лого"
-    )
+    
     def __str__(self):
         return self.title
+    
     class Meta:
-        verbose_name = "О нас"
+        verbose_name = "О Нас"
+        verbose_name_plural = "О Нас"
+
+class Specializations(models.Model):
+    logo = models.ImageField(
+        verbose_name="Специальности"
+    )
+    spec_name = models.CharField(
+        max_length=100,
+        verbose_name="Названия Спец-ти"
+    )
+    def __str__(self):
+        return self.spec_name
+
+    class Meta:
+        verbose_name = "Специальность"
+        verbose_name_plural = "Специальности"    
 
 class OurProjects(models.Model):
     title = models.CharField(
@@ -129,13 +140,23 @@ class OurProjects(models.Model):
     
     class Meta:
         verbose_name = "Наши Проэкты"
-
+        verbose_name_plural = "Наши Проэкты"
 
 class OurServices(models.Model):
     title = models.CharField(
         max_length=100,
         verbose_name="Заголовок"
     )
+    # service_title = models.CharField(
+    #     max_length=100,
+    #     verbose_name="Заголовок сервиса"
+    # )
+    # service_description = models.TextField(
+    #     verbose_name="Описания Сервиса"
+    # )
+    # service_icon = models.ImageField(
+    #     verbose_name="Иконка сервиса"
+    # )
     years = models.IntegerField(
         verbose_name = "Годы"
     ) 
@@ -154,6 +175,24 @@ class OurServices(models.Model):
     class Meta:
         verbose_name = "Наш Сервис"
         verbose_name_plural = "Наши сервисы"  
+
+class Service(models.Model):
+    icon = models.ImageField(
+        verbose_name="Иконка Сервиса"
+    )
+    service_title = models.CharField(
+        max_length=50,
+        verbose_name="Названия Сервиса"
+    )   
+    service_description = models.TextField(
+        verbose_name="Описания Сервиса"
+    )    
+    def __str__(self):
+        return self.service_title
+
+    class Meta:
+        verbose_name = "Сервис"
+        verbose_name_plural = "Сервисы"
 
 class Contacts(models.Model):
     title = models.CharField(
@@ -198,3 +237,4 @@ class Footer(models.Model):
 
     class Meta:
         verbose_name = "Футер"
+        verbose_name_plural = "Футеры"

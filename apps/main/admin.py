@@ -12,7 +12,7 @@
 #     list_display = ('home', 'about', 'projects', 'services', 'contacts')
     
 from django.contrib import admin
-from .models import Info, Navigation, MainProjects, About, OurProjects, OurServices, Contacts, Footer
+from .models import Info, Navigation, MainProjects, About, OurProjects, OurServices, Contacts, Footer, Specializations, Service
 
 @admin.register(Info)
 class InfoAdmin(admin.ModelAdmin):
@@ -26,11 +26,19 @@ class NavigationAdmin(admin.ModelAdmin):
 
 @admin.register(MainProjects)
 class MainProjectsAdmin(admin.ModelAdmin):
-    list_display = ('project_name', 'project_desription')
+    list_display = ('project_name', 'project_description')
 
 @admin.register(About)
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('title', 'citate', 'description',)
+
+@admin.register(Specializations)
+class SpeacializationAdmin(admin.ModelAdmin):
+    list_display =  ('spec_name',)   
+
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('service_title',)    
 
 @admin.register(OurProjects)
 class OurProjectsAdmin(admin.ModelAdmin):
@@ -40,7 +48,6 @@ class OurProjectsAdmin(admin.ModelAdmin):
 class OurServicesAdmin(admin.ModelAdmin):
     list_display = ('title', 'years', 'years_title1', 'years_title2')
     
-
 @admin.register(Contacts)
 class ContactsAdmin(admin.ModelAdmin):
     list_display = ('title', 'number1', 'number2', 'email', 'adress', 'send_button')
@@ -48,3 +55,7 @@ class ContactsAdmin(admin.ModelAdmin):
 @admin.register(Footer)
 class FooterAdmin(admin.ModelAdmin):
     list_display = ('name',)
+
+# @admin.register(FeedBack)
+# class FeedBackAdmin(admin.ModelAdmin):
+#     list_display = ('name',)    

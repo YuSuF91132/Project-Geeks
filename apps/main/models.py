@@ -68,7 +68,7 @@ class MainProjects(models.Model):
         max_length=100,
         verbose_name="Имя Проэкта"
     )
-    project_desription = models.TextField(
+    project_description = models.TextField(
         verbose_name="Описание Проэкта"
     )
     def __str__(self):
@@ -115,6 +115,17 @@ class Specializations(models.Model):
     class Meta:
         verbose_name = "Специальность"
         verbose_name_plural = "Специальности"    
+
+# class ProjectTitle(models.Model):
+#     title = models.CharField(
+#         max_length=100,
+#         verbose_name="Заголовок"
+#     )
+#     def __str__(self):
+#         return self.title
+#     class Meta:
+#         verbose_name = "Заголовок Проэкта"
+#         verbose_name_plural = "Заголовок Проэктов"    
 
 class OurProjects(models.Model):
     title = models.CharField(
@@ -227,6 +238,7 @@ class Contacts(models.Model):
         verbose_name_plural = "Контакты"    
 
 class Footer(models.Model):
+    
     name = models.CharField(
         max_length=100,
         verbose_name="Имя Компании"
@@ -238,3 +250,22 @@ class Footer(models.Model):
     class Meta:
         verbose_name = "Футер"
         verbose_name_plural = "Футеры"
+
+class FeedBack(models.Model):
+    name = models.TextField(
+        null=True,
+        blank=True
+    )
+    phone = models.TextField(
+        null=True,
+        blank=True
+    )
+    company = models.TextField(
+        null=True,
+        blank=True
+    )
+    message = models.TextField(
+        null=True,
+        blank=True
+    )
+    email = models.TextField()    
